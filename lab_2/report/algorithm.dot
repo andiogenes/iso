@@ -1,0 +1,35 @@
+digraph G {
+    Вход;
+    {rank = sink; Выход} [shape=rect;style="rounded"]
+
+    load [label="Загрузить станки деталями\n(основываясь на правиле предпочтения)"; shape=rect]
+    t_0 [label="t=0"; shape=rect]
+    is_not_empty [label="Производственный цикл обработки\nне завершен"; shape=diamond]
+
+    special_state [label="Установить в t ближайшее время перехода системы\nв одно из особых состояний"; shape=rect]
+
+    Вход -> t_0
+    t_0 -> load
+    load -> is_not_empty
+
+    is_not_empty -> special_state [label="Истина"]
+
+    subgraph cluster_0 {
+        style=invis;
+        foreach_machine_start [label="Для каждого станка m"; shape=invhouse; fillcolor=grey; style=filled]
+        foreach_machine_end [label="Для каждого станка m"; shape=house; fillcolor=grey; style=filled]
+        try_pop [label="Убрать детали,\nобработка которых на станке завершена"; shape=rect]
+        machine_empty [label="Станок свободен"; shape=diamond]
+        deque [label="Отправить свободную деталь на станок\n(выбрав, основываясь на правиле предпочтения)"; shape=rect]
+
+        special_state -> foreach_machine_start
+        foreach_machine_start -> try_pop
+        try_pop -> machine_empty
+        machine_empty -> deque [label="Истина"]
+        machine_empty -> foreach_machine_end [label="Ложь"]
+        deque -> foreach_machine_end
+    }
+
+    foreach_machine_end -> Выход [style=invis]
+    is_not_empty -> Выход [label="Ложь"]
+}
