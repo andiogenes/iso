@@ -229,7 +229,7 @@ object Main {
         case _ =>
       }
     }
-    println(s"${table.tendency} F = ${table.matrix.head.head.round}, X = (${x.map(_.round).mkString(",")}), Z = (${z.map(_.round).mkString(",")})")
+    println(s"${table.tendency} F = ${table.matrix.head.head.round}; X = (${x.indices.map(i => s"x${i+1}").mkString(",")}) = (${x.map(_.round).mkString(",")}); Z = (${z.indices.map(i => s"z${i+1}").mkString(",")}) = (${z.map(_.round).mkString(",")})")
   }
 
 }
