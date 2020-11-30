@@ -1,0 +1,71 @@
+\textbf{Тест \textit{2}.}\newline
+\textbf{Условия задачи:}\newline
+\begin{equation*}
+F = 2.0x_1 + 1.0x_2 - 2.0x_3 \rightarrow \min
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+-1.0x_1 - 1.0x_2 + 1.0x_3 & \le -8.0 \\
+-1.0x_1 + 1.0x_2 - 2.0x_3 & \le 2.0 \\
+2.0x_1 + 8.0x_2 - 3.0x_3 & \le 1.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после приведения к каноническому виду:}\newline
+\begin{equation*}
+F = -2.0x_1 - 1.0x_2 + 2.0x_3 + 0.0z_1 + 0.0z_2 + 0.0z_3 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 1.0x_2 - 1.0x_3 - 1.0z_1 + 0.0z_2 + 0.0z_3 & = 8.0 \\
+-1.0x_1 + 1.0x_2 - 2.0x_3 + 0.0z_1 + 1.0z_2 + 0.0z_3 & = 2.0 \\
+2.0x_1 + 8.0x_2 - 3.0x_3 + 0.0z_1 + 0.0z_2 + 1.0z_3 & = 1.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после выбора базиса:}\newline
+Базис: $(a_1, z_2, z_3)$\newline
+\begin{equation*}
+F = -2.0x_1 - 1.0x_2 + 2.0x_3 + 0.0z_1 + 0.0z_2 + 0.0z_3 + 0.0a_1 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 1.0x_2 - 1.0x_3 - 1.0z_1 + 0.0z_2 + 0.0z_3 + 1.0a_1 & = 8.0 \\
+-1.0x_1 + 1.0x_2 - 2.0x_3 + 0.0z_1 + 1.0z_2 + 0.0z_3 + 0.0a_1 & = 2.0 \\
+2.0x_1 + 8.0x_2 - 3.0x_3 + 0.0z_1 + 0.0z_2 + 1.0z_3 + 0.0a_1 & = 1.0 \\
+\end{cases}
+\end{equation*}
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & z1 & z2 & z3 & a1 \\ 
+\hline
+x1 & 0.50 & 1.00 & 4.00 & -1.50 & 0.00 & 0.00 & 0.50 & 0.00 \\ 
+\hline
+a1 & 7.50 & 0.00 & -3.00 & 0.50 & -1.00 & 0.00 & -0.50 & 1.00 \\ 
+\hline
+z2 & 2.50 & 0.00 & 5.00 & -3.50 & 0.00 & 1.00 & 0.50 & 0.00 \\ 
+\hline
+F & -1.00 & 0.00 & -7.00 & 1.00 & -0.00 & -0.00 & -1.00 & -0.00 \\ 
+\hline
+M & 8.50 & 0.00 & 3.00 & -0.50 & 1.00 & 0.00 & 0.50 & 0.00 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация М-метода №1}\end{table}
+
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & z1 & z2 & z3 & a1 \\ 
+\hline
+x3 & 15.00 & 0.00 & -6.00 & 1.00 & -2.00 & 0.00 & -1.00 & 2.00 \\ 
+\hline
+x1 & 23.00 & 1.00 & -5.00 & 0.00 & -3.00 & 0.00 & -1.00 & 3.00 \\ 
+\hline
+z2 & 55.00 & 0.00 & -16.00 & 0.00 & -7.00 & 1.00 & -3.00 & 7.00 \\ 
+\hline
+F & -16.00 & 0.00 & -1.00 & 0.00 & 2.00 & -0.00 & 0.00 & -2.00 \\ 
+\hline
+M & 16.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 1.00 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация М-метода №2}\end{table}
+
+\newpage
+\textbf{Функция не ограничена на множестве допустимых решений - задача не имеет конечного решения}

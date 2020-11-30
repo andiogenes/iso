@@ -1,0 +1,75 @@
+\textbf{Тест \textit{1}.}\newline
+\textbf{Условия задачи:}\newline
+\begin{equation*}
+F = -1.0x_1 + 3.0x_2 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 2.0x_2 & \le 4.0 \\
+1.0x_1 - 1.0x_2 & \ge 1.0 \\
+1.0x_1 + 1.0x_2 & \le 8.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после приведения к каноническому виду:}\newline
+\begin{equation*}
+F = -1.0x_1 + 3.0x_2 + 0.0z_1 + 0.0z_2 + 0.0z_3 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 2.0x_2 + 1.0z_1 + 0.0z_2 + 0.0z_3 & = 4.0 \\
+1.0x_1 - 1.0x_2 + 0.0z_1 - 1.0z_2 + 0.0z_3 & = 1.0 \\
+1.0x_1 + 1.0x_2 + 0.0z_1 + 0.0z_2 + 1.0z_3 & = 8.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после выбора базиса:}\newline
+Базис: $(z_1, a_2, z_3)$\newline
+\begin{equation*}
+F = -1.0x_1 + 3.0x_2 + 0.0z_1 + 0.0z_2 + 0.0z_3 + 0.0a_2 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 2.0x_2 + 1.0z_1 + 0.0z_2 + 0.0z_3 + 0.0a_2 & = 4.0 \\
+1.0x_1 - 1.0x_2 + 0.0z_1 - 1.0z_2 + 0.0z_3 + 1.0a_2 & = 1.0 \\
+1.0x_1 + 1.0x_2 + 0.0z_1 + 0.0z_2 + 1.0z_3 + 0.0a_2 & = 8.0 \\
+\end{cases}
+\end{equation*}
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & z1 & z2 & z3 & a2 \\ 
+\hline
+x1 & 1.00 & 1.00 & -1.00 & 0.00 & -1.00 & 0.00 & 1.00 \\ 
+\hline
+z1 & 3.00 & 0.00 & 3.00 & 1.00 & 1.00 & 0.00 & -1.00 \\ 
+\hline
+z3 & 7.00 & 0.00 & 2.00 & 0.00 & 1.00 & 1.00 & -1.00 \\ 
+\hline
+F & -1.00 & 0.00 & -2.00 & -0.00 & 1.00 & -0.00 & -1.00 \\ 
+\hline
+M & 2.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 1.00 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация М-метода №1}\end{table}
+
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & z1 & z2 & z3 \\ 
+\hline
+x2 & 1.00 & 0.00 & 1.00 & 0.33 & 0.33 & 0.00 \\ 
+\hline
+x1 & 2.00 & 1.00 & 0.00 & 0.33 & -0.67 & 0.00 \\ 
+\hline
+z3 & 5.00 & 0.00 & 0.00 & -0.67 & 0.33 & 1.00 \\ 
+\hline
+F & 1.00 & 0.00 & 0.00 & 0.67 & 1.67 & 0.00 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация симплекс-метода №1}\end{table}
+\newpage
+\textbf{Оптимальное решение прямой ЗЛП:}\newline
+$F_{max}$ = 1.0;\newline
+$X$ = $( x_1, x_2 )$ = $( 2.0, 1.0 )$;\newline
+$Z$ = $( z_1, z_2, z_3 )$ = $( 0.0, 0.0, 5.0 )$.\newline
+\textbf{Оптимальное решение двойственной ЗЛП:}\newline
+$L$ = 1.0;\newline
+$Y$ = $( y_1, y_2, y_3 )$ = $( 0.6666666666666666, 1.6666666666666665, 0.0 )$.\newline
+

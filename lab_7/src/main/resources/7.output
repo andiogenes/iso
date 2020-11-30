@@ -1,0 +1,102 @@
+\textbf{Тест \textit{7}.}\newline
+\textbf{Условия задачи:}\newline
+\begin{equation*}
+F = 4.0x_1 + 5.0x_2 + 9.0x_3 + 11.0x_4 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 1.0x_2 + 1.0x_3 + 1.0x_4 & \le 15.0 \\
+7.0x_1 + 5.0x_2 + 3.0x_3 + 2.0x_4 & \le 120.0 \\
+3.0x_1 + 5.0x_2 + 10.0x_3 + 15.0x_4 & \le 100.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после приведения к каноническому виду:}\newline
+\begin{equation*}
+F = 4.0x_1 + 5.0x_2 + 9.0x_3 + 11.0x_4 + 0.0z_1 + 0.0z_2 + 0.0z_3 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 1.0x_2 + 1.0x_3 + 1.0x_4 + 1.0z_1 + 0.0z_2 + 0.0z_3 & = 15.0 \\
+7.0x_1 + 5.0x_2 + 3.0x_3 + 2.0x_4 + 0.0z_1 + 1.0z_2 + 0.0z_3 & = 120.0 \\
+3.0x_1 + 5.0x_2 + 10.0x_3 + 15.0x_4 + 0.0z_1 + 0.0z_2 + 1.0z_3 & = 100.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после выбора базиса:}\newline
+Базис: $(z_1, z_2, z_3)$\newline
+\begin{equation*}
+F = 4.0x_1 + 5.0x_2 + 9.0x_3 + 11.0x_4 + 0.0z_1 + 0.0z_2 + 0.0z_3 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 + 1.0x_2 + 1.0x_3 + 1.0x_4 + 1.0z_1 + 0.0z_2 + 0.0z_3 & = 15.0 \\
+7.0x_1 + 5.0x_2 + 3.0x_3 + 2.0x_4 + 0.0z_1 + 1.0z_2 + 0.0z_3 & = 120.0 \\
+3.0x_1 + 5.0x_2 + 10.0x_3 + 15.0x_4 + 0.0z_1 + 0.0z_2 + 1.0z_3 & = 100.0 \\
+\end{cases}
+\end{equation*}
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & x4 & z1 & z2 & z3 \\ 
+\hline
+x4 & 6.67 & 0.20 & 0.33 & 0.67 & 1.00 & 0.00 & 0.00 & 0.07 \\ 
+\hline
+z1 & 8.33 & 0.80 & 0.67 & 0.33 & 0.00 & 1.00 & 0.00 & -0.07 \\ 
+\hline
+z2 & 106.67 & 6.60 & 4.33 & 1.67 & 0.00 & 0.00 & 1.00 & -0.13 \\ 
+\hline
+F & 73.33 & -1.80 & -1.33 & -1.67 & 0.00 & 0.00 & 0.00 & 0.73 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация симплекс-метода №1}\end{table}
+\newpage
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & x4 & z1 & z2 & z3 \\ 
+\hline
+x1 & 10.42 & 1.00 & 0.83 & 0.42 & 0.00 & 1.25 & 0.00 & -0.08 \\ 
+\hline
+x4 & 4.58 & -0.00 & 0.17 & 0.58 & 1.00 & -0.25 & 0.00 & 0.08 \\ 
+\hline
+z2 & 37.92 & 0.00 & -1.17 & -1.08 & 0.00 & -8.25 & 1.00 & 0.42 \\ 
+\hline
+F & 92.08 & 0.00 & 0.17 & -0.92 & 0.00 & 2.25 & 0.00 & 0.58 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация симплекс-метода №2}\end{table}
+
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & x4 & z1 & z2 & z3 \\ 
+\hline
+x3 & 7.86 & -0.00 & 0.29 & 1.00 & 1.71 & -0.43 & 0.00 & 0.14 \\ 
+\hline
+x1 & 7.14 & 1.00 & 0.71 & 0.00 & -0.71 & 1.43 & 0.00 & -0.14 \\ 
+\hline
+z2 & 46.43 & -0.00 & -0.86 & 0.00 & 1.86 & -8.71 & 1.00 & 0.57 \\ 
+\hline
+F & 99.29 & -0.00 & 0.43 & 0.00 & 1.57 & 1.86 & 0.00 & 0.71 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация симплекс-метода №3}\end{table}
+
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & x4 & z1 & z2 & z3 \\ 
+\hline
+x1 & 7.14 & 1.00 & 0.71 & 0.00 & -0.71 & 1.43 & 0.00 & -0.14 \\ 
+\hline
+x3 & 7.86 & 0.00 & 0.29 & 1.00 & 1.71 & -0.43 & 0.00 & 0.14 \\ 
+\hline
+z2 & 46.43 & 0.00 & -0.86 & 0.00 & 1.86 & -8.71 & 1.00 & 0.57 \\ 
+\hline
+F & 99.29 & 0.00 & 0.43 & 0.00 & 1.57 & 1.86 & 0.00 & 0.71 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация симплекс-метода №4}\end{table}
+
+\newpage
+\textbf{Оптимальное решение прямой ЗЛП:}\newline
+$F_{max}$ = 99.28571428571429;\newline
+$X$ = $( x_1, x_2, x_3, x_4 )$ = $( 7.14285714285714, 0.0, 7.857142857142859, 0.0 )$;\newline
+$Z$ = $( z_1, z_2, z_3 )$ = $( 0.0, 46.42857142857146, 0.0 )$.\newline
+\textbf{Оптимальное решение двойственной ЗЛП:}\newline
+$L$ = 99.28571428571429;\newline
+$Y$ = $( y_1, y_2, y_3 )$ = $( 1.8571428571428565, 0.0, 0.7142857142857143 )$.\newline
+

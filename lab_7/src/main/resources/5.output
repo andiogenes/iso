@@ -1,0 +1,70 @@
+\textbf{Тест \textit{5}.}\newline
+\textbf{Условия задачи:}\newline
+\begin{equation*}
+F = 1.0x_1 + 2.0x_2 + 0.0x_3 + 0.0x_4 + 0.0x_5 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+1.0x_1 - 1.0x_2 + 1.0x_3 + 0.0x_4 + 0.0x_5 & \le -1.0 \\
+1.0x_1 - 1.0x_2 + 0.0x_3 - 1.0x_4 + 0.0x_5 & = -3.0 \\
+1.0x_1 + 0.0x_2 + 0.0x_3 + 0.0x_4 + 1.0x_5 & \ge 3.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после приведения к каноническому виду:}\newline
+\begin{equation*}
+F = 1.0x_1 + 2.0x_2 + 0.0x_3 + 0.0x_4 + 0.0x_5 + 0.0z_1 + 0.0z_2 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+-1.0x_1 + 1.0x_2 - 1.0x_3 + 0.0x_4 + 0.0x_5 - 1.0z_1 + 0.0z_2 & = 1.0 \\
+-1.0x_1 + 1.0x_2 + 0.0x_3 + 1.0x_4 + 0.0x_5 + 0.0z_1 + 0.0z_2 & = 3.0 \\
+1.0x_1 + 0.0x_2 + 0.0x_3 + 0.0x_4 + 1.0x_5 + 0.0z_1 - 1.0z_2 & = 3.0 \\
+\end{cases}
+\end{equation*}
+
+\textbf{Задача, после выбора базиса:}\newline
+Базис: $(a_1, x_4, x_5)$\newline
+\begin{equation*}
+F = 1.0x_1 + 2.0x_2 + 0.0x_3 + 0.0x_4 + 0.0x_5 + 0.0z_1 + 0.0z_2 + 0.0a_1 \rightarrow \max
+\end{equation*}
+\begin{equation*}
+\begin{cases}
+-1.0x_1 + 1.0x_2 - 1.0x_3 + 0.0x_4 + 0.0x_5 - 1.0z_1 + 0.0z_2 + 1.0a_1 & = 1.0 \\
+-1.0x_1 + 1.0x_2 + 0.0x_3 + 1.0x_4 + 0.0x_5 + 0.0z_1 + 0.0z_2 + 0.0a_1 & = 3.0 \\
+1.0x_1 + 0.0x_2 + 0.0x_3 + 0.0x_4 + 1.0x_5 + 0.0z_1 - 1.0z_2 + 0.0a_1 & = 3.0 \\
+\end{cases}
+\end{equation*}
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & x4 & x5 & z1 & z2 & a1 \\ 
+\hline
+x2 & 1.00 & -1.00 & 1.00 & -1.00 & -0.00 & -0.00 & -1.00 & 0.00 & 1.00 \\ 
+\hline
+x4 & 2.00 & 0.00 & 0.00 & 1.00 & 1.00 & 0.00 & 1.00 & 0.00 & -1.00 \\ 
+\hline
+x5 & 3.00 & 1.00 & 0.00 & 0.00 & 0.00 & 1.00 & 0.00 & -1.00 & 0.00 \\ 
+\hline
+F & 2.00 & -3.00 & 0.00 & -2.00 & -0.00 & -0.00 & -2.00 & 0.00 & 2.00 \\ 
+\hline
+M & 2.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 1.00 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация М-метода №1}\end{table}
+
+\begin{table}[h]\begin{center}\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+\hline
+ & Св. & x1 & x2 & x3 & x4 & x5 & z1 & z2 \\ 
+\hline
+x1 & 3.00 & 1.00 & 0.00 & 0.00 & 0.00 & 1.00 & 0.00 & -1.00 \\ 
+\hline
+x2 & 4.00 & 0.00 & 1.00 & -1.00 & 0.00 & 1.00 & -1.00 & -1.00 \\ 
+\hline
+x4 & 2.00 & 0.00 & 0.00 & 1.00 & 1.00 & 0.00 & 1.00 & 0.00 \\ 
+\hline
+F & 11.00 & 0.00 & 0.00 & -2.00 & 0.00 & 3.00 & -2.00 & -3.00 \\ 
+\hline
+\end{tabular}\end{center}\caption{Итерация симплекс-метода №1}\end{table}
+
+
+\newpage
+\textbf{Функция не ограничена на множестве допустимых решений - задача не имеет конечного решения}
