@@ -158,7 +158,7 @@ class TransportationProblem {
         LinkedList<Pipe>(x.flatten().filter { it != NIL })
 
     /**
-     * Нечётный цикл, начинающийся с [s].
+     * Чётный цикл, начинающийся с [s].
      */
     private fun getCycle(s: Pipe): Array<Pipe> {
         // Все ненулевые элементы
@@ -171,7 +171,7 @@ class TransportationProblem {
                 adjacent[0] == NIL || adjacent[1] == NIL
             });
 
-        // Построение нечётного цикла
+        // Построение чётного цикла
         val nodes = Array(path.size) { NIL }
         var prev = s
         for (i in nodes.indices) {
